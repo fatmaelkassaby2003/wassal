@@ -1,0 +1,359 @@
+body {
+    font-family: 'Cairo', 'sans-serif';
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.nav-icons {
+display: flex;
+align-items: center;
+gap: 10px; /* المسافة بين الصور */
+}
+
+.links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* وضع الروابط أسفل الصورة */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 150px;
+    z-index: 10;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+/* عند تفعيل الـ checkbox يتم عرض الروابط */
+.toggle-links:checked+.links {
+    display: block;
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 15px;
+    display: block;
+}
+
+/* تغيير لون الرابط عند التمرير */
+ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+.navbar {
+    position: absolute;
+    bottom: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: auto;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #427E59 !important;
+    text-decoration: none !important;
+}
+
+.nav-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #fff; */
+    padding: 10px;
+    width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.nav-1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 38.73px;
+    font-family: 'Cairo', 'sans-serif';
+    padding: 5px;
+    transition: 0.3s;
+    /* تأثير ناعم */
+}
+
+.nav-1 a:hover,
+.nav-1 a:focus {
+    color: darkgreen;
+    border-bottom: 3px solid darkgreen;
+    /* خط سفلي عند الضغط */
+    outline: none;
+    /* إزالة الإطار الأزرق الافتراضي */
+}
+
+
+
+
+.title {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    width: 800px;
+}
+
+.title h4 {
+    color: #1C3A28;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cart {
+    margin-top: 300px;
+    margin-left: 150px;
+    width: 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.cart h2 {
+    background: #FF725E;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 -15px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.quantity button {
+    background: #FF725E;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+
+.total {
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.checkout {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #FF725E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+
+.checkout:hover {
+    background: #427E59;
+}
+
+.ratings {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 140px;
+    margin-top: 80px;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Cairo', sans-serif;
+}
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.review img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.stars {
+    color: gold;
+}
+
+footer {
+    background: #f0f8ed;
+    padding: 50px;
+    text-align: right;
+    width: 1110px;
+    height: 250px;
+    margin: 80px auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 22%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2d572c;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-left: 20px;
+}
+
+.contact-btn {
+    margin-left: auto;
+    background: #2d572c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+    width: 100%;
+    display: block;
+}
+
+.number-overlay {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        background-color: #fdf1ef;
+        color: #d9534f;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 4px 9px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }

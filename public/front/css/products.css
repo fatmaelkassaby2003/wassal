@@ -1,0 +1,350 @@
+* {
+    /* box-sizing: border-box; */
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* وضع الروابط أسفل الصورة */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 150px;
+    z-index: 10;
+}
+
+/* عند تفعيل الـ checkbox يتم عرض الروابط */
+.toggle-links:checked+.links {
+    display: block;
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 15px;
+    display: block;
+}
+
+/* تغيير لون الرابط عند التمرير */
+ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+.navbar {
+    position: absolute;
+    bottom: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #427E59 !important;
+    text-decoration: none !important;
+}
+
+.nav-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #fff; */
+    padding: 10px;
+    width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.nav-1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 38.73px;
+    padding: 5px;
+    transition: 0.3s;
+    /* تأثير ناعم */
+}
+
+.nav-1 a:hover,
+.nav-1 a:focus {
+    color: darkgreen;
+    border-bottom: 3px solid darkgreen;
+    /* خط سفلي عند الضغط */
+    outline: none;
+    /* إزالة الإطار الأزرق الافتراضي */
+}
+
+.products {
+    margin-top: 80px;
+}
+
+.category {
+    /* width: 90%; */
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.category h1 {
+    background: #427E59;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 50%;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.container-pro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* يضمن التوسيط */
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px);
+    /* يجعل كل كارد يأخذ ثلث المساحة */
+    max-width: 300px;
+    /* يحدّد الحد الأقصى للعرض */
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #FF725E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 14px;
+    border: none;
+}
+
+.button:hover {
+    background: #427E59;
+}
+
+
+/* تغيير شكل زر "الأقسام" ليأخذ نفس شكل الرابط */
+.dropdown .dropbtn {
+    display: none;
+    /* إخفاء الـ button الأصلي */
+}
+
+/* عرض الرابط بدلاً من الزر */
+.dropdown .nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #427E59;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* تنسيق محتوى القائمة المنسدلة */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* تنسيق الروابط داخل القائمة المنسدلة */
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+/* التأثير عند التمرير على الرابط داخل القائمة المنسدلة */
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+/* إظهار القائمة المنسدلة عند التمرير على الزر */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+footer {
+    background: #f0f8ed;
+    padding: 50px;
+    text-align: right;
+    width: 1000px;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 22%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2d572c;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-left: 20px;
+}
+
+.contact-btn {
+    background: #2d572c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+    width: 100%;
+    display: block;
+}
+.number-overlay {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: #fdf1ef;
+    color: #d9534f;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 9px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}

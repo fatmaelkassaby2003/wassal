@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* إخفاء التمرير الأفقي */
+    overflow-y: auto; /* تمكين التمرير العمودي */
+    height: 100%; /* ضمان أن الجسم يأخذ كامل ارتفاع الشاشة */
+    /* display: flex; */
+    justify-content: center;  /* لمحاذاة العنصر أفقيًا */
+    align-items: center;      /* لمحاذاة العنصر عموديًا */
+    height: 100vh;            /* لجعل الجسم يمتد بطول الشاشة */
+    margin: 0;     
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* المسافة بين الصور */
+}
+
+
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* إخفاء الروابط بشكل افتراضي */
+.links {
+    display: none;
+    position: absolute;
+    top: 100%;  /* وضع الروابط أسفل الصورة */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 150px;
+    z-index: 10;
+}
+
+/* عند تفعيل الـ checkbox يتم عرض الروابط */
+.toggle-links:checked + .links {
+    display: block;
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 15px;
+    display: block;
+}
+
+/* تغيير لون الرابط عند التمرير */
+ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+.navbar {
+    position: absolute;
+    bottom: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #427E59 !important;
+    text-decoration: none !important;
+}
+
+.title {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    width: 800px;
+}
+
+.title h4 {
+    color: #1C3A28;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.container-fluid {
+    left: 100px;
+    width: 600px;
+    margin-right: 300px;
+}
+
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    /* height: 500px; */
+    
+}
+
+.search-input {
+    text-align: right;
+    direction: rtl;
+    margin-left: 10px;
+    padding: 15px;
+    width: 900px;
+    height: 50px;
+    border: 0px solid #ccc;
+    border-radius: 15px;
+}
+
+.search-input::placeholder {
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: 500px;
+    font-size: 18px;
+    padding: 3px;
+    /* margin: 15px; */
+} 
+
+.btn-warning {
+    background-color: #ff735c;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-weight: 500px;
+    font-size: 18px;
+    padding: auto;
+}
+
+.btn-warning:hover {
+    color: #427E59;
+}
+
+.form-control {
+    width: 700px;
+}
+
+
+.about-text {
+    font-family: sans-serif;
+    text-align: right;
+    font-size: 20px;
+    line-height: 55px;
+    color: #333;
+    text-align: center;
+    max-width: 900px;
+    margin: 80px auto 0px;
+    background: #FCFCFC;
+    padding: 32px;
+    gap: 10px;
+    border-radius: 35px;
+}
+
+
+.container-restaurants {
+    max-width: 1000px;
+    /* width: 100%;           */
+    margin: 120px auto;
+}
+
+.restaurant-card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    width: 900px;
+    height: 100px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px auto;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.restaurant-details {
+    text-align: right;
+    margin-left: 400px;
+}
+.restaurant-details h3 {
+    margin: 5px 0;
+    color: #2d4739;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.restaurant-details p {
+    margin: 5px 0;
+    color: #777;
+    font-size: 16px;
+}
+.status-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+.status {
+    color: #2d4739;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 18px;
+}
+.rating img {
+    width: 18px;
+    margin-left: 5px;
+}
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+
+footer {
+    background: #f0f8ed;
+    padding: 50px;
+    text-align: right;
+     margin: 60px auto;
+    width: 920px;
+    height: 113px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* margin: auto; */
+}
+
+.footer-section {
+    width: 22%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2d572c;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-left: 20px;
+}
+
+.contact-btn {
+    margin-left: auto;
+    background: #2d572c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+    width: 100%;
+    display: block;
+}
+
+
+.number-overlay {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: #fdf1ef;
+    color: #d9534f;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 9px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.image-container-1 {
+    position: relative;
+    display: inline-block;
+}

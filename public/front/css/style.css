@@ -1,0 +1,593 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', 'sans-serif';
+    direction: rtl;
+    background: #FAFCF9;
+    overflow-x: hidden; /* إخفاء التمرير الأفقي */
+    overflow-y: auto; /* تمكين التمرير العمودي */
+    height: 100%; /* ضمان أن الجسم يأخذ كامل ارتفاع الشاشة */
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* المسافة بين الصور */
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+/* إخفاء الروابط بشكل افتراضي */
+.links {
+    display: none;
+    position: absolute;
+    top: 100%;  /* وضع الروابط أسفل الصورة */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 150px;
+    z-index: 10;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.number-overlay {
+    position: absolute;
+    bottom: -8px;
+    right: -5px;
+    background-color: #fdf1ef;
+    color: #d9534f;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 9px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.image-container-1 {
+    position: relative;
+    display: inline-block;
+}
+
+/* عند تفعيل الـ checkbox يتم عرض الروابط */
+.toggle-links:checked + .links {
+    display: block;
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 15px;
+    display: block;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+/* تغيير لون الرابط عند التمرير */
+ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+.navbar {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 20px;
+    gap: 20px;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #427E59 !important;
+    text-decoration: none !important;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.title {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    width: 800px;
+    
+}
+
+.title h4 {
+    color: #1C3A28;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 10;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.container-fluid {
+    position: absolute;
+    top: 90%;
+    left: 48%;
+    width: 800px;
+    margin-right: 100px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    
+}
+
+.search-input {
+    text-align: right;
+    direction: rtl;
+    margin-left: 10px;
+    width: 800px;
+}
+
+.search-input::placeholder {
+    text-align: right;
+    font-size: 20px;
+    font-family: 'Cairo', 'sans-serif';
+} 
+
+.btn-warning {
+    background-color: #ff735c;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    font-family: 'Cairo', 'sans-serif';
+    font-size: 15px;
+}
+
+.btn-warning:hover {
+    color: #427E59;
+}
+
+.form-control {
+    width: 600px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.card {
+    width: 200px; /* تقليل حجم الكارت */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border: 2px solid green;
+}
+
+.card-img-top {
+    width: 80px; /* تصغير حجم الصورة */
+    height: 80px;
+    margin: 10px auto;
+    display: block;
+}
+
+.card-title {
+    font-size: 20px; /* تصغير حجم العنوان */
+    color: #3F8058;
+    font-weight: bold;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 600px;
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-content {
+    max-width: 60%;
+}
+
+h2 {
+    color: #2d572c;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+p {
+    color: #444;
+    font-size: 20px;
+    line-height: 1.7;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.action-btn {
+    background-color: #ff735c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #e65c4f;
+}
+
+.info-img {
+    width: 200px;
+    height: auto;
+}
+
+
+.about-section h2 {
+    font-family:'Cairo','sans-serif';
+    color: #1C3A28;
+    font-size: 40px;
+    width: 700px;
+    margin-right: 50px;
+    text-align: right;
+    line-height: 48px;
+    margin-bottom: 15px;
+}
+
+.features-section h3 {
+    color: #007f5f;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+/* تنسيق النصوص */
+.about-text {
+    font-family: 'Cairo', 'sans-serif';
+    text-align: right;
+    font-size: 30px;
+    line-height: 57.6px;
+    color: #333;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    background: #ECF2EE;
+    padding: 32px;
+    gap: 10px;
+    border-radius: 35px;
+}
+
+.about-text strong
+{
+    color: #000000;
+    font: Tajawal;
+    width: 500px;
+    text-align: right;
+    font-size: 48px;
+    line-height: 57.6px;
+    font-weight: bold;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+
+/* ✅ قسم المزايا */
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.features-section h3 {
+    font-family: 'Cairo', 'sans-serif';
+    color: #1C3A28;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 60px;
+    font-weight: 700;
+   font-size:40px;
+   Line-height:48px;
+}
+
+.feature-box {
+    background: white;
+    padding: 64px;
+    border-radius: 35px;
+    gap: 24px;
+    text-align: center;
+    width: 300px;
+    margin-right: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box img {
+    width: 50px;
+    height: 50px;
+}
+
+h4 {
+    color: #007f5f;
+    margin: 10px 0;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+/* ✅ قسم لماذا تختار "وصل" */
+.benefits-section {
+    font-family: 'Cairo', 'sans-serif';
+    text-align: right;
+    margin-top: 150px;
+    margin-right: 50px;
+    margin-bottom: 0px;
+    color:#1C3A28;
+    font-weight: 700px;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.benefits-section h3 {
+    font-family: 'Cairo', 'sans-serif';
+    text-align: right;
+    color: #1C3A28;
+    /* margin-right: 50px; */
+    margin-bottom: 40px;
+    font-weight: 700px;
+    font-size: 45px;
+    line-height: 48px;
+}
+
+.benefits-list {
+    padding: 0px;
+    margin-right: 50px;
+    margin-top: 10px;
+    list-style-type: disc !important; /* تغيير الدائرة لتكون معتمة */
+}
+
+.benefits-list li {
+    background: url('check-icon.png') no-repeat right center;
+    /* padding-right: 30px; */
+    margin: 25px auto;
+    gap: 30px;
+    font-family: 'Cairo', 'sans-serif';
+    font-weight:500px;
+   font-size:32px;
+    Line-height:38.4px;
+    /* font-size: 18px; */
+    color: #333;
+}
+
+/* ✅ صورة التوصيل */
+.illustration {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.illustration img {
+    max-width: 90%;
+    height: auto;
+}
+
+
+.cities-container {
+    margin: 50px auto;
+    width: 85%;
+}
+
+.cities-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2d572c;
+    margin-right: 20px;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.cities-container h2 span {
+    font-size: 30px;
+    font-family: 'Cairo', 'sans-serif';
+    font-weight: bold;
+    color: #2d572c;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.city-card {
+    background: #fff;
+    font-family: 'Cairo', 'sans-serif';
+    padding: 20px; /* زيادة التباعد الداخلي */
+    min-height: 150px; /* تحديد حد أدنى للارتفاع */
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-grow: 1; /* يسمح للبطاقة بالتمدد داخل الشبكة */
+}
+
+
+.city-name {
+    text-decoration: none; 
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d572c;
+    margin-bottom: 5px;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.city-link {
+    text-decoration: none; 
+    font-size: 14px;
+    font-family: 'Cairo', 'sans-serif';
+    color: #666;
+}
+
+.arrow {
+    position: absolute;
+    text-decoration: none; 
+    left: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+footer {
+    background: #f0f8ed;
+    padding: 50px;
+    text-align: right;
+    width: 1300px;
+    height: 350px;
+    margin: 80px auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 22%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2d572c;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-left: 20px;
+}
+
+.contact-btn {
+    margin-left: auto;
+    background: #2d572c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+    width: 100%;
+    display: block;
+}
+
